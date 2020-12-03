@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+
+import React, {useState} from 'react;'
 import './App.css';
 
 function App() {
@@ -9,15 +10,6 @@ function App() {
         <h1 className='titular'>Bienvenido a The Gallery</h1>
         <button className='boton_creador'>Acceder Creador</button>
         <button ClassName='boton_invitado'>Acceder Invitado</button>
-      
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-        </a>
       </header>
     </div>
   );
