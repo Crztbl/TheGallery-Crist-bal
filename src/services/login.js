@@ -1,14 +1,12 @@
-const ENDPOINT = 'http://localhost:3001/usuarios';
 import axios from 'axios';
+const ENDPOINT = 'http://localhost:3001/usuarios';
 
 function login({usuario, contraseña}) {
-    await axios.get('http://localhost:3001/usuarios', {params: {usuario: usuario, contraseña: contraseña}})
-    .then(response=>{
-        //console.log(response.data);
-    })
-    .catch(error=>{
-        console.log(error);
-    })
+    return fetch('http://localhost:3001/usuarios', {
+
+    }
+
+    )
 }
 
 export default login;
