@@ -13,7 +13,8 @@ function App() {
       <header className="App-header">
         <h1 className='titular'>Bienvenido a The Gallery</h1>
         <button className='boton_creador'>Acceder Creador</button>
-        <button ClassName='boton_invitado'>Acceder Invitado</button>
+        <button className='boton_registrarse'>Registrate aquí</button>
+        <Register/>
       </header>
     </div>
     </router>

@@ -16,54 +16,9 @@
       "contraseña": "12345"
     },
     {
-      "usuario": "cristobaltest",
-      "contraseña": "cristobal",
-      "id": 4
-    },
-    {
-      "usuario": "cristobaltest",
-      "contraseña": "cristobal",
-      "id": 5
-    },
-    {
       "usuario": "hola",
       "contraseña": "hola",
-      "id": 6
-    },
-    {
-      "usuario": "asdasd",
-      "contraseña": "asdasd",
-      "id": 7
-    },
-    {
-      "usuario": "cristobal",
-      "contraseña": "alvarez",
-      "id": 8
-    },
-    {
-      "usuario": "hola",
-      "contraseña": "asasdasd",
-      "id": 9
-    },
-    {
-      "usuario": "asdasd",
-      "contraseña": "asdasd",
-      "id": 10
-    },
-    {
-      "usuario": "buenastardes",
-      "contraseña": "buenststardes",
-      "id": 11
-    },
-    {
-      "usuario": "buenastardesasdasd",
-      "contraseña": "buenststardeasdasds",
-      "id": 12
-    },
-    {
-      "usuario": "asdasd",
-      "contraseña": "asdasd",
-      "id": 13
+      "id": 4
     }
   ]
 }
