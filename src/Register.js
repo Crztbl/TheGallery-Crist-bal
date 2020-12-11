@@ -3,33 +3,41 @@ import axios from 'axios';
 import register from './services/register';
 
 export default function Register () {
-    const[usuario, setUsuario] = useState('')
-    const[contraseña, setContraseña] = useState('')
+    const[email, setEmail] = useState('')
+    const[password, setPassword] = useState('')
+    const[username, setUsername] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(usuario)
-        console.log(contraseña)
-        register({usuario, contraseña})
+        console.log(email)
+        console.log(password)
+        const respuesta = register({username, email, password})
+        console.log(respuesta)
     }
 
-    //console.log('usuario', usuario)
-    //console.log('contraseña', contraseña)
+    console.log('email', email)
+    console.log('contraseña', password)
+    console.log('Usuario', username)
 
     return (
-            <form onSubmit={handleSubmit}>
-                <input
-                    placeholder='Ingrese usuario'
-                    onChange={(e) => setUsuario(e.target.value)}
-                    value={usuario}
-                />
-                <input
-                    type="password"
-                    placeholder="password"
-                    onChange={(e) => setContraseña(e.target.value)}
-                    value={contraseña}
-                />
-                <button>Registrarse</button>
-            </form>
+        <form onSubmit={handleSubmit}>
+            <input
+                placeholder='Nombre de usuario'
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+            />
+            <input
+                placeholder='Correo electrónico'
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+            />
+            <input
+                type="password"
+                placeholder="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+            />
+            <button>Crear cuenta</button>
+        </form>
     )
 }

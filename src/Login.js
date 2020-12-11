@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
 import login from './services/login'
 
-const urlapi = 'http://localhost:3001/usuarios'
 
 export default function Login () {
-    const[usuario, setUsuario] = useState('')
-    const[contraseña, setContraseña] = useState('')
+    const[email, setEmail] = useState('')
+    const[password, setPassword] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(usuario)
-        console.log(contraseña)
-        login({usuario, contraseña})
+        console.log(email)
+        console.log(password)
+        const respuesta = login({email, password})
+        console.log(respuesta)
     }
 
-    //console.log('usuario', usuario)
-    //console.log('contraseña', contraseña)
+    console.log('Correo', email)
+    console.log('Contraseña', password)
+    console.log(JSON.stringify({email, password}))
 
     return (
         <form onSubmit={handleSubmit}>
             <input
-                placeholder='Ingrese usuario'
-                onChange={(e) => setUsuario(e.target.value)}
-                value={usuario}
+                placeholder='Correo electrónico'
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
             />
             <input
                 type="password"
-                placeholder="password"
-                onChange={(e) => setContraseña(e.target.value)}
-                value={contraseña}
+                placeholder="Contraseña"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
             />
             <button>Login</button>
         </form>
