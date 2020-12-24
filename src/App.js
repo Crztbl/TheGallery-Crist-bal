@@ -11,7 +11,7 @@ function App() {
     <router>
     <div className="App">
       <header className="App-header">
-        <h1 className='titular'>Bienvenido a The Gallery</h1>
+        <h1 className='titular'>Repositorio nuevo cristobal</h1>
         <button className='boton_creador'>Acceder Creador</button>
         <button className='boton_registrarse'>Registrate aquí</button>
         <Register/>
