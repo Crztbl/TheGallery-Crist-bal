@@ -6,13 +6,14 @@ import './Header.css';
 export default function Header () {
     return(
         <Router>
-        <header className='tg-header'>
-            <Switch>
-                <route path="/register">
-                    <Register/>
-                </route>
-            </Switch>
-        </header>
+            <header className='Tg-header'></header>
+
+
+
+
+
         </Router>
+
+    
     );
 }
