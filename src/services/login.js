@@ -10,10 +10,12 @@ export default function login ({ email, password}) {
         },
         body: JSON.stringify({email, password})
     }).then(res => {
+        if (!res.ok) throw new Error('Response is NOT ok')
         return res.json()
-    })
-    .catch(err => {
-        console.log('Usuario y/o contraseña incorrecto(s)');
-    });
-    
+        console.log('hoasdasd')
+    }).then(res => {
+        const { jwt } = res
+        return jwt
+        
+    })    
 };

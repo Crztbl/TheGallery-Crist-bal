@@ -4,19 +4,30 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Header from './components/Header'
 
+import {UserContextProvider} from './context/UserContext';
+
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className='container'>
-        <Switch>
-          <Route path='/login'>
-            <Login/>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <UserContextProvider>
+      <Router>
+        <Header />
+        <div className='container'>
+          <Switch>
+            <Route path='/login' exact>
+              <Login />
+            </Route>
+            <Route path='/register' exact>
+              <Register />
+            </Route>
+            <Route path='/'>
+              Página de inicio
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </UserContextProvider>
   );
 }
 
