@@ -1,4 +1,4 @@
-const { Router } = require('express');
+const { Router, json } = require('express');
 const router = Router();
 
 const jwt = require('jsonwebtoken');
@@ -56,11 +56,11 @@ router.post('/signin', async (req, res, next) => {
         res.status(401).json({auth: false, token: null})
     }
 
-    const token = jwt.sign({id: user._id}, config.secret, {
+    const Jwt = jwt.sign({id: user._id}, config.secret, {
             expiresIn: 60*60*24
     });
 
-    res.json({token});
+    return res.json({Jwt});
 })
 
 module.exports = router;

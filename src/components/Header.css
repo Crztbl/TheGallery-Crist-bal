@@ -1,6 +1,7 @@
 .tg-header{
     display: flex;
     justify-content: flex-end;
+    color: brown;
 }
 
 .tg-header a {

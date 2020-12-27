@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import login from './services/login'
+import login from './components/login'
+import useUser from './components/useUser'
+import {useLocation} from "wouter"
+import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+
 
 import './Login.css';
 
@@ -7,11 +11,17 @@ import './Login.css';
 export default function Login () {
     const[email, setEmail] = useState('')
     const[password, setPassword] = useState('')
+    const [, navigate] = useLocation()
+    const {login, isLogged} = useUser()
+
+    useEffect(() => {
+        if (isLogged) 
+        <Link to="/"></Link>
+    }, [isLogged, navigate])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //const respuesta = login({email, password})
-        console.log(login({email, password}))
+        login({email, password})
     }
     /*
     console.log('Correo', email)

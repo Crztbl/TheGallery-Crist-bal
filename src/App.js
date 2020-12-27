@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Header from './components/Header'
 
-import {UserContextProvider} from './context/UserContext';
+import {UserContextProvider} from './components/UserContext';
 
 import './App.css';
 
@@ -24,6 +24,7 @@ function App() {
             <Route path='/'>
               Página de inicio
             </Route>
+            
           </Switch>
         </div>
       </Router>
