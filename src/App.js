@@ -3,8 +3,9 @@ import Register from './Register'
 import React from "react";
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Header from './components/Header'
+import Upload from './Upload';
 
-import {UserContextProvider} from './components/UserContext';
+import {UserContextProvider} from './context/UserContext';
 
 import './App.css';
 
@@ -21,10 +22,12 @@ function App() {
             <Route path='/register' exact>
               <Register />
             </Route>
+            <Route path='/upload'>
+              <Upload />
+            </Route>
             <Route path='/'>
               Página de inicio
-            </Route>
-            
+            </Route>            
           </Switch>
         </div>
       </Router>

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './Header.css';
 
-import useUser from './useUser'
+import useUser from '../hooks/useUser'
 
 export default function Header () {
 
@@ -18,12 +18,12 @@ export default function Header () {
         <header className='tg-header'>
             {
                 isLogged
-                    ? <Link href='#' onClick={handleClick}>
+                    ? <Link to='#' onClick={handleClick}>
                         Logout
                     </Link>
-                    : <Link to='/login'>
+                    : (<Link to='/register'>
                         Registrate
-                    </Link>
+                    </Link>)                    
                 }
         </header>
 
