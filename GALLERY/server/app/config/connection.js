@@ -3,9 +3,9 @@
 const mongoose = require('mongoose')
 const { mongoDB } = require('./data')
 
-mongoose.connect(mongoDB.URl, {
+mongoose.connect(mongoDB.URI, {
     useNewUrlParser: true,
-    useUnifiedTopology : true
+    useUnifiedTopology: true
 })
-    .then(db => console.log('data base is connected'))
-    .catch(err => console.log(`there was an error ${err}`))
+    .then(db => console.log(`database is connected`))
+    .catch(err => console.log(`there was an error : ${err}`))

@@ -1,6 +1,6 @@
 import React from 'react'
 import Upload from './Upload'
-import ListImage from './ListImage'
+import ListImage from './List'
 
 const UploadContainer = () => {
     return(

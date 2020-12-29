@@ -18,12 +18,15 @@ export default function Header () {
         <header className='tg-header'>
             {
                 isLogged
-                    ? <Link to='#' onClick={handleClick}>
+                    ? <Link to='/' onClick={handleClick}>
                         Logout
+                        <Link to='/upload'>
+                            Upload
+                        </Link>
                     </Link>
-                    : (<Link to='/register'>
-                        Registrate
-                    </Link>)                    
+                    : <Link to='/login'>
+                        Inicia sesión
+                    </Link>                    
                 }
         </header>
 

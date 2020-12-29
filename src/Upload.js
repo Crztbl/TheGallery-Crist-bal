@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar'
-import UploadContainer from './components/UploadContainer'
+import GalleryContainer from './components/GalleryContainer'
 
 export default function Upload () {
       
@@ -8,7 +8,7 @@ export default function Upload () {
     return(
         <>
             <Navbar />
-            <UploadContainer />
+            <GalleryContainer />
         </>
     )
 }

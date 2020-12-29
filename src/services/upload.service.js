@@ -3,16 +3,15 @@ import API from '../utils/const'
 
 class UploadService {
     getImages() {
-        return axios.get(`${API.URl}/download`)
-
+        return axios.get(`${API.URI}/download`)
     }
 
-    sendImages(name, file) {
+    sendImage(name, file) {
         const form = new FormData()
         form.append('name', name)
         form.append('file', file, 'form-data')
 
-        return axios.post(`${API.URl}/upload)`, form)
+        return axios.post(`${API.URI}/upload`,form)
     }
 }
 

@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Header from './components/Header'
 import Upload from './Upload';
+import Home from './Home'
 
 import {UserContextProvider} from './context/UserContext';
 
@@ -26,7 +27,7 @@ function App() {
               <Upload />
             </Route>
             <Route path='/'>
-              Página de inicio
+              <Home />
             </Route>            
           </Switch>
         </div>
