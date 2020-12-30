@@ -10,9 +10,6 @@ const UploadContainer = () => {
                 <div className="col-nd-3">
                     <Upload />
                 </div>
-                <div className="col-nd-9">
-                    <ListImage />
-                </div>
             </div>
         </div>
         </>

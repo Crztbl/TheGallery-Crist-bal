@@ -15,8 +15,8 @@ export default function Login () {
     const {login, isLogged} = useUser()
 
     useEffect(() => {
-        if (isLogged) 
-        <Link to="/"></Link>
+        if (isLogged)
+        console.log('estás conectado')
     }, [isLogged, navigate])
 
     const handleSubmit = (e) => {

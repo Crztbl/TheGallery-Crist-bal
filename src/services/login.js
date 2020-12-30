@@ -14,6 +14,7 @@ export default function login ({ email, password}) {
         return res.json();
     }).then(res => {
         const { Jwt } = res
+        console.log(Jwt)
         return Jwt        
     })    
 };

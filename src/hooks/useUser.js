@@ -10,7 +10,7 @@ export default function useUser () {
     const login = useCallback(({email, password}) => {
         loginService({email, password})
             .then(Jwt => {
-                console.log(Jwt)
+                //console.log(Jwt)
                 setJWT(Jwt)
             })
             .catch(err => {
@@ -20,7 +20,7 @@ export default function useUser () {
 
     const logout = useCallback(() => {
         setJWT(null);
-        console.log(Jwt)
+        //console.log(Jwt)
     }, [setJWT])
     
     return {

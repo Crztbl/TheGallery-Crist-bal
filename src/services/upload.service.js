@@ -3,7 +3,9 @@ import API from '../utils/const'
 
 class UploadService {
     getImages() {
-        return axios.get(`${API.URI}/download`)
+        return axios.get(`${API.URI}/download`).then(res => {      
+            return res.data
+        })
     }
 
     sendImage(name, file) {
