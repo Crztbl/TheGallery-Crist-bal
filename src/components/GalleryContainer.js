@@ -12,23 +12,22 @@ export default class FetchRandomUser extends React.Component {
 
     async componentDidMount() {
         const respuesta = await UploadService.getImages()
+        console.log(respuesta)
         this.setState({images: respuesta, loading: false});
     }
     render() {
-        if (this.state.loading) {
-            return <div>Loading...</div>
-        }
 
         return(
-            <div>
-                {this.state.images.map(image =>(
-                    <div>
-                        <img src={image.urlFile} />
-                        <div>{image.fileName}</div>
-                    </div>
-                ))}
+            <div class="container p-4">
+                <div class="row">
+                        {this.state.images.map(image =>(
+                            <div class="card">
+                                <img src={image.urlFile} />
+                                <p class="card-text">{image.fileName}</p>
+                            </div>
+                        ))}
+                </div>
             </div>
-
         )
     }
 }

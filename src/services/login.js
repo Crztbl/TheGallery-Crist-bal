@@ -6,7 +6,6 @@ export default function login ({ email, password}) {
         method: 'POST',
         headers:{
             "Content-Type": "application/json",
-            //"Authorization": 'Basic Y3Jpc3RvYmFsOmFsdmFyZXo=',
         },
         body: JSON.stringify({email, password})
     }).then(res => {
@@ -15,6 +14,7 @@ export default function login ({ email, password}) {
     }).then(res => {
         const { Jwt } = res
         console.log(Jwt)
+        alert('Inicio de sesión exitoso')
         return Jwt        
     })    
 };

@@ -8,7 +8,6 @@ export default function Upload () {
       
     return(
         <>
-            <Navbar />
             <UploadContainer />
         </>
     )

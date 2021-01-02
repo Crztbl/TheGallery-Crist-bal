@@ -6,7 +6,6 @@ export default function register ({ username, email, password}) {
         method: 'POST',
         headers:{
             "Content-Type": "application/json",
-            "Authorization": 'Basic Y3Jpc3RvYmFsOmFsdmFyZXo='
         },
         body: JSON.stringify({username, email, password})
     }).then(res => {

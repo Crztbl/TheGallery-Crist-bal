@@ -15,22 +15,35 @@ export default function Header () {
     }
     
     return(
-        <header className='tg-header'>
+        <header class='navbar navbar-dark bg-dark'>
             {
                 isLogged
-                    ? <Link to='/' onClick={handleClick}>
-                        Logout
-                        <Link to='/upload'>
-                            Upload
-                        </Link>
-                    </Link>
+                    ? <Link to='/' onClick={handleClick}>Logout</Link>
                     : <Link to='/login'>
                         Inicia sesión
+                        <Link to="/register">
+                            Registrate
+                        </Link>
+                    </Link>                    
+                }
+        </header>
+    
+    );
+}
+
+/*
+
+<header class='navbar navbar-dark bg-dark'>
+            {
+                isLogged
+                    ? <Link to='/' onClick={handleClick}>Logout</Link>
+                    : <Link to='/login'>
+                        Inicia sesión
+                        <Link to="/register">
+                            Registrate
+                        </Link>
                     </Link>                    
                 }
         </header>
 
-
-    
-    );
-}
+*/
