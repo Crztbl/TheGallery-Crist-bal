@@ -45,29 +45,3 @@ export default function Login () {
         </div>
     )
 }
-
-/*
-
-<div className='Tg-login-container'>
-<h1> Iniciar sesión</h1>
-<form className='Tg-login' onSubmit={handleSubmit}>
-    <h6>
-    <input
-        placeholder='Correo electrónico'
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
-    />
-    </h6>
-    <h6>
-    <input
-        type="password"
-        placeholder="Contraseña"
-        onChange={(e) => setPassword(e.target.value)}
-        value={password}
-    />
-    </h6>
-    <button className ='boton-login'>Login</button>
-</form>
-</div>
-
-*/

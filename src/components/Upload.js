@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import UploadService from '../services/upload.service'
-import '../assets/styles/Upload.css'
+import './Upload.css'
 
 const Upload = (setImages, images) => {
 
@@ -40,24 +40,25 @@ const Upload = (setImages, images) => {
     return(
         <form>
             <div className="input-file">
-                <input type="file"
+            <input type="file"
                         placeholder="File"
                         onChange={onFileChange} />
                 
-                <img className="img-fluid img-thumbnail image" src={pathImage} alt="images" />
+                <img className="img-thumbnail" src={pathImage} alt="images" />
+
             </div>
 
             <input 
                 type="text"
-                placeholder="Name" 
-                className="name-picture mt-2" 
+                placeholder="Agrega un comentario" 
+                className="pie-foto" 
                 onChange={(e) => setName(e.target.value)}
                 />
 
             <br />
 
-            <button type="submit" className="btn btn-outline-primary btn-lg btn-block" onClick={sendImage}>
-                Send Image
+            <button type="submit" className="boton" onClick={sendImage}>
+                Subir imagen
             </button>
         </form>
     )

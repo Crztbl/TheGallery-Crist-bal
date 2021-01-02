@@ -35,25 +35,3 @@ export default function Register () {
         </div>
     )
 }
-
-/*
-<form onSubmit={handleSubmit}>
-<input
-    placeholder='Nombre de usuario'
-    onChange={(e) => setUsername(e.target.value)}
-    value={username}
-/>
-<input
-    placeholder='Correo electrónico'
-    onChange={(e) => setEmail(e.target.value)}
-    value={email}
-/>
-<input
-    type="password"
-    placeholder="password"
-    onChange={(e) => setPassword(e.target.value)}
-    value={password}
-/>
-<button>Crear cuenta</button>
-</form>
-*/

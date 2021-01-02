@@ -2,15 +2,13 @@ import React from 'react'
 import Upload from './Upload'
 import ListImage from './List'
 
+import './Upload.css'
+
 const UploadContainer = () => {
     return(
         <>
-        <div className="container mt-3">
-            <div className="row">
-                <div className="col-nd-3">
-                    <Upload />
-                </div>
-            </div>
+        <div className="upload-container">
+            <Upload />
         </div>
         </>
     )
