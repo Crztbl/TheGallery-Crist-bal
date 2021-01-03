@@ -10,7 +10,6 @@ const uploader = multer({storage})
 router.post('/upload', uploader.single('file'), async(req, res) => {
     const { file, body } = req
 
-    console.log("lo que nos esta llegando ; ", body.name)
 
     if(file && body) {
         const newImage = new Image({

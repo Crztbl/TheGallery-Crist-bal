@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import login from './services/login'
-import useUser from './hooks/useUser'
+import login from '../services/login'
+import useUser from '../hooks/useUser'
 import {useLocation} from "wouter"
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 

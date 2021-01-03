@@ -10,21 +10,27 @@ export default function Header () {
 
     const handleClick = e => {
         e.preventDefault()
-        console.log('hola')
         logout()
     }
     
     return(
         <header class='navbar navbar-dark bg-dark'>
+            <Link to ='/'>Home</Link>
             {
                 isLogged
-                    ? <Link to='/' onClick={handleClick}>Logout</Link>
+                    ? <Link to='/upload'>
+                        Subir imagen
+                        <Link to='/' onClick={handleClick}>
+                            Cerrar sesión
+                        </Link>
+                        </Link >
                     : <Link to='/login'>
                         Inicia sesión
-                        <Link to="/register">
-                            Registrate
+                        <Link to='/register'>
+                            Regístrate
                         </Link>
-                    </Link>                    
+                        </Link>
+                    
                 }
         </header>
     

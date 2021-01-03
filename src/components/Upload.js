@@ -1,23 +1,42 @@
 import React, { useState } from 'react'
 import UploadService from '../services/upload.service'
 import './Upload.css'
+import getdatos from '../services/getdatos'
+import {UserContextProvider} from '../context/UserContext'
 
 const Upload = (setImages, images) => {
 
     const [ name, setName ] = useState("")
     const [ file, setFile ] = useState()
     const [ pathImage, setPathImage ] = useState("http://localhost:4000/upload.png")
+    const [Jwt, setJWT] = useState("")
 
-    const sendImage = (e) => {
+
+    function getData() {
+
+        let Jwt = sessionStorage.getItem('Jwt');
+        console.log(Jwt)
+        return Jwt
+    }
+
+
+    const sendImage = async (e) => {
         e.preventDefault()
-        UploadService.sendImage(name, file).then((result) => {
-            console.log("el resultado : ", result.data.newImage)
-            // setName("")
-            // setFile()
-            // setPathImage("http://localhost:4000/upload.png")
-            
+        setJWT(getData())
+        console.log(Jwt)
+        const info = await getdatos(Jwt)
+        const contacto = info.email
+        const usuario = info.username
+        const infosubida = 
+        ' Subido por '+ usuario + 
+        '   --Contacto: '+ contacto
+        console.log(infosubida)
+        UploadService.sendImage(name + infosubida, file).then((result) => {
+            console.log("el resultado : ", result.data.newImage)            
         })
     }
+
+
 
     const onFileChange = (e) => {
         if(e.target.files && e.target.files.length > 0) {
@@ -38,6 +57,7 @@ const Upload = (setImages, images) => {
     }
 
     return(
+        <UserContextProvider>
         <form>
             <div className="input-file">
             <input type="file"
@@ -61,6 +81,7 @@ const Upload = (setImages, images) => {
                 Subir imagen
             </button>
         </form>
+        </UserContextProvider>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Upload from './Upload'
-import ListImage from './List'
 
 import './Upload.css'
 

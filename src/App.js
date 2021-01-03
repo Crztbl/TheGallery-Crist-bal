@@ -1,10 +1,10 @@
-import Login from'./Login';
-import Register from './Register'
+import Login from'./pages/Login';
+import Register from './pages/Register'
 import React from "react";
 import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
 import Header from './components/Header'
-import Upload from './Upload';
-import Home from './Home'
+import Upload from './pages/Upload';
+import Home from './pages/Home'
 
 import {UserContextProvider} from './context/UserContext';
 

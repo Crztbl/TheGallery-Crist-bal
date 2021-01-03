@@ -10,11 +10,16 @@ export default function useUser () {
     const login = useCallback(({email, password}) => {
         loginService({email, password})
             .then(Jwt => {
-                //console.log(Jwt)
+                window.sessionStorage.setItem('Jwt', Jwt)
+                const hola = sessionStorage.getItem('Jwt')
+                console.log(hola)
+                console.log(Jwt)
+                console.log('hoasdasdasd')
                 setJWT(Jwt)
             })
             .catch(err => {
-               console.error(err) 
+                window.sessionStorage.removeItem('Jwt')
+                console.error(err) 
             })
     },      [setJWT])
 
@@ -26,6 +31,7 @@ export default function useUser () {
     return {
         isLogged: Boolean(Jwt),
         login,
-        logout
+        logout,
+
     }
 }

@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import List from './List'
-import Upload from './Upload'
 import UploadService from '../services/upload.service';
 
 
-export default class FetchRandomUser extends React.Component {
+export default class ObtainImages extends React.Component {
     state = {
         loading: true, 
         images: []
@@ -21,8 +19,8 @@ export default class FetchRandomUser extends React.Component {
             <div class="container p-4">
                 <div class="row">
                         {this.state.images.map(image =>(
-                            <div class="card">
-                                <img src={image.urlFile} />
+                            <div class="card" styles="margin-bottom: 30px;">
+                                <img class="img-responsive" src={image.urlFile} />
                                 <p class="card-text">{image.fileName}</p>
                             </div>
                         ))}
